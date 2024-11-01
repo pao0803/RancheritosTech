@@ -49,16 +49,16 @@ export function EventContentCard({
         <Typography variant="h2" color="blue-gray" className="mb-4 font-medium">
           {title}
         </Typography>
-        <Typography className="mb-12 md:w-8/12 font-medium !text-gray-500">
+        <Typography className="mb-12 md:w-8/12 font-medium !text-black">
           {des}
         </Typography>
         <div className="flex items-center gap-4">
-          <Avatar
-            variant="circular"
-            src="/image/logotech.png"
-            alt="spotify"
+          {/* <Avatar
+            variant=""
+            src=""
+            alt=""
             size="lg"
-          />
+          /> */}
           <div>
             <Typography variant="h6" color="blue-gray" className="mb-0.5">
               {name}

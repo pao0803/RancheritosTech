@@ -36,8 +36,8 @@ export function Faq() {
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto">
         <div className="text-center">
-          <Typography variant="h1" color="orange" className="mb-4">
-            Preguntas Frecuentes
+          <Typography variant="h1" color="orange" className="mb-6 font-semibold text-3xl">
+            PREGUNTAS FRECUENTES 
           </Typography>
           <Typography
             variant="lead"

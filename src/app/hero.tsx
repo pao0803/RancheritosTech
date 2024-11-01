@@ -8,7 +8,7 @@ function Hero() {
   return (
     <div
       className="relative min-h-screen w-full bg-cover bg-center"
-      style={{ backgroundImage: "url('/image/fondo.jpg')" }}
+      style={{ backgroundImage: "url('/image/fondo1.jpg')" }}
     >
       
     <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
@@ -18,18 +18,18 @@ function Hero() {
           
         </Typography>
         <Typography variant="h1" color="white" className="lg:max-w-3xl">
-          Rancheritos Tech
+          RANCHERITOS TECH
         </Typography>
         <Typography
           variant="lead"
           color="white"
           className="mt-1 mb-12 w-full md:max-w-full lg:max-w-2xl"
         >
-          "Desarrollando el futuro con la esencia de lo nuestro"
+          "DESARROLLANDO EL FUTURO CON LA ESENCIA DE LO NUESTRO"
         </Typography>
         <div className="flex items-center gap-4">
           <Button variant="gradient" color="white">
-            Get started
+            ¿QUIÉNES SOMOS?
           </Button>
           <IconButton className="rounded-full bg-white p-6">
             <PlayIcon className="h-4 w-4 text-gray-900" />

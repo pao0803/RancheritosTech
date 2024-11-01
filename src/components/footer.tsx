@@ -32,7 +32,7 @@ export function Footer() {
           {/* Información del footer y links */}
           <div>
             <Typography variant="h6" color="gray">
-              Contact Us
+              Contactanos
             </Typography>
             <ul className="my-4">
               {LINKS.map((link) => (
@@ -44,14 +44,14 @@ export function Footer() {
               ))}
             </ul>
             <Typography color="gray" className="text-sm">
-              &copy; {CURRENT_YEAR} Rancheritos Tech. All rights reserved.
+              &copy; {CURRENT_YEAR} Rancheritos Tech. Todos los derechos reservados.
             </Typography>
           </div>
 
           {/* Formulario de contacto */}
           <div>
-            <Typography variant="h1" color="orange">
-              Contactanos
+            <Typography variant="h1" color="orange" className="text-center mb-6 font-semibold text-3xl">
+              CONTACTANOS
             </Typography>
             <form onSubmit={handleSubmit} className="mt-4 space-y-4">
               <Input

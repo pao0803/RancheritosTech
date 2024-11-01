@@ -41,17 +41,17 @@ function NavItem({ children, href }: NavItemProps) {
 
 const NAV_MENU = [
   {
-    name: "Misio y Visión",
+    name: "MISIÓN Y VISIÓN",
     icon: EyeIcon,
     href: "http://localhost:8081/"
   },
   {
-    name: "Productos y Servicios",
+    name: "PRODUCTOS Y SERVICIOS",
     icon: DevicePhoneMobileIcon,
      href: "#accountSection"
   },
   {
-    name: "Docs",
+    name: "PREGUNTAS FRECUENTES",
     icon: CommandLineIcon,
     href: "https://www.material-tailwind.com/docs/react/installation",
   },
@@ -116,11 +116,8 @@ export function Navbar() {
           ))}
         </ul>
         <div className="hidden items-center gap-4 lg:flex">
-          <Button color={isScrolling ? "gray" : "white"} variant="text">
-            Log in
-          </Button>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"}>blocks</Button>
+            <Button color={isScrolling ? "gray" : "white"}>Contactanos</Button>
           </a>
         </div>
         <IconButton
