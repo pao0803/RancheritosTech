@@ -1,3 +1,4 @@
+//mision y vision
 "use client";
 
 import { Typography } from "@material-tailwind/react";

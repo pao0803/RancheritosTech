@@ -1,3 +1,4 @@
+//inicio
 "use client";
 
 import { IconButton, Button, Typography } from "@material-tailwind/react";

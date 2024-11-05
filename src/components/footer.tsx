@@ -2,7 +2,7 @@ import { Typography, Button, Input, Textarea } from "@material-tailwind/react";
 import { useState } from "react";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Inicio", "Quienes somos", "Mision y vision", "Products"];
+const LINKS = ["Inicio", "Quienes somos", "Mision y vision", "Productos"];
 
 export function Footer() {
   const [formData, setFormData] = useState({
