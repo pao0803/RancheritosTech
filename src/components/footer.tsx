@@ -2,7 +2,7 @@ import { Typography, Button, Input, Textarea } from "@material-tailwind/react";
 import { useState } from "react";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Company", "About Us", "Team", "Products", "Blog"];
+const LINKS = ["Inicio", "Quienes somos", "Mision y vision", "Products"];
 
 export function Footer() {
   const [formData, setFormData] = useState({
@@ -23,10 +23,11 @@ export function Footer() {
     e.preventDefault();
     console.log("Form data submitted:", formData);
     // Aquí puedes agregar la lógica para enviar los datos a un servidor o correo electrónico
+    
   };
 
   return (
-    <footer className="p-8 bg-gray-100 text-gray-700">
+    <footer className="p-8 bg-gray-100 text-gray-700" id="formulario">
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Información del footer y links */}
@@ -51,7 +52,7 @@ export function Footer() {
           {/* Formulario de contacto */}
           <div>
             <Typography variant="h1" color="orange" className="text-center mb-6 font-semibold text-3xl">
-              CONTACTANOS
+              CONTÁCTANOS
             </Typography>
             <form onSubmit={handleSubmit} className="mt-4 space-y-4">
               <Input
@@ -84,6 +85,7 @@ export function Footer() {
                Enviar Mensaje
               </Button>
             </form>
+            
           </div>
         </div>
       </div>
