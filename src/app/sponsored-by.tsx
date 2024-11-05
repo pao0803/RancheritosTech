@@ -33,9 +33,9 @@ export function SponsoredBy() {
 
   const images = [
     { src: "/image/megatron.jpg", alt: "Megatron" },
-    { src: "/image/megatron.jpg", alt: "Megatron" },
-    { src: "/image/megatron.jpg", alt: "Megatron" },
-    { src: "/image/megatron.jpg", alt: "Megatron" },
+    { src: "/image/canacorp.jpg", alt: "canacorp" },
+    { src: "/image/logo.jpeg", alt: "krux" },
+    
     
     // Agrega más imágenes según lo necesites
   ];
