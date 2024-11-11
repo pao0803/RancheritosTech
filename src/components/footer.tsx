@@ -6,9 +6,11 @@ const LINKS = ["Inicio", "Quienes somos", "Mision y vision", "Productos"];
 
 export function Footer() {
   const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    message: ""
+    nombre: "", // Cambié name a nombre
+    apellidos: "", // Añadí apellidos
+    correo: "", // Añadí correo
+    telefono: "",
+    mensaje: ""
   });
 
   const handleChange = (e) => {
@@ -19,11 +21,27 @@ export function Footer() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form data submitted:", formData);
-    // Aquí puedes agregar la lógica para enviar los datos a un servidor o correo electrónico
-    
+
+    try {
+      const response = await fetch("https://backend-integradora.vercel.app/api/contactus", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData), // Envía los datos del formulario en formato JSON
+      });
+
+      if (response.ok) {
+        console.log("Formulario enviado exitosamente");
+        // Puedes mostrar un mensaje de éxito o resetear el formulario
+      } else {
+        console.error("Error al enviar el formulario");
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+    }
   };
 
   return (
@@ -33,7 +51,7 @@ export function Footer() {
           {/* Información del footer y links */}
           <div>
             <Typography variant="h6" color="gray">
-              Contactanos
+              Contáctanos
             </Typography>
             <ul className="my-4">
               {LINKS.map((link) => (
@@ -57,35 +75,52 @@ export function Footer() {
             <form onSubmit={handleSubmit} className="mt-4 space-y-4">
               <Input
                 type="text"
-                label="Nombre "
-                name="name"
-                value={formData.name}
+                label="Nombre"
+                name="nombre" // Cambié name a nombre
+                value={formData.nombre}
+                onChange={handleChange}
+                required
+                className="w-full"
+              />
+              <Input
+                type="text"
+                label="Apellidos"
+                name="apellidos" // Añadí campo apellidos
+                value={formData.apellidos}
+                onChange={handleChange}
+                required
+                className="w-full"
+              />
+              <Input
+                type="email"
+                label="Correo"
+                name="correo" // Añadí campo correo
+                value={formData.correo}
                 onChange={handleChange}
                 required
                 className="w-full"
               />
               <Input
                 type="tel"
-                label="Telefono"
-                name="phone"
-                value={formData.phone}
+                label="Teléfono"
+                name="telefono"
+                value={formData.telefono}
                 onChange={handleChange}
                 required
                 className="w-full"
               />
               <Textarea
                 label="Mensaje"
-                name="message"
-                value={formData.message}
+                name="mensaje"
+                value={formData.mensaje}
                 onChange={handleChange}
                 required
                 className="w-full"
               />
               <Button type="submit" color="orange" className="w-full">
-               Enviar Mensaje
+                Enviar Mensaje
               </Button>
             </form>
-            
           </div>
         </div>
       </div>
