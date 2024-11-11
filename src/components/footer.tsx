@@ -23,7 +23,6 @@ export function Footer() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("https://backend-integradora.vercel.app/api/contactus", {
         method: "POST",
