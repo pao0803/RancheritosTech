@@ -1,14 +1,8 @@
-//mision y vision
-"use client";
-
-import { Typography } from "@material-tailwind/react";
-import AboutCard from "@/components/about-card";
-
 const EVENT_INFO = [
   {
     title: "MISIÓN",
     description:
-      "Crear soluciones de software innovadoras y accesibles que impulsen el crecimiento y la eficiencia de nuestros clientes. ",
+      "Crear soluciones de software innovadoras y accesibles que impulsen el crecimiento y la eficiencia de nuestros clientes.",
     subTitle: "",
   },
   {
@@ -22,24 +16,22 @@ const EVENT_INFO = [
 export function AboutEvent() {
   return (
     <section className="container mx-auto flex flex-col items-center px-4 py-10" id="misionyvision">
-      <Typography variant="h6" className="text-center mb-2" color="orange">
-      
-      </Typography>
+      <Typography variant="h6" className="text-center mb-2" color="orange"></Typography>
       <Typography variant="h3" className="text-center mb-6 font-semibold text-3xl" color="orange">
-      QUIENES SOMOS
+        QUIENES SOMOS
       </Typography>
       <Typography
         variant="lead"
         className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal !"
       >
         Somos Rancheritos Tech, una empresa dedicada al desarrollo de software
-        y a la implementación de tecnologías de información (TIC's) para grandes y medianas empresas.
+        y a la implementación de tecnologías de información (TIC&apos;s) para grandes y medianas empresas.
       </Typography>
-      <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
+      <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
         {EVENT_INFO.map((props, idx) => (
           <AboutCard key={idx} {...props} />
         ))}
-        <div className="md:col-span-2 ">
+        <div className="md:col-span-2">
           <AboutCard 
             title="REDES"
             subTitle=""
@@ -50,5 +42,3 @@ export function AboutEvent() {
     </section>
   );
 }
-
-export default AboutEvent;
