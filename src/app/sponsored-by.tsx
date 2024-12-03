@@ -44,7 +44,7 @@ export function SponsoredBy() {
   return (
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto text-center">
-      <Typography variant="h1" color="orange" className="mb-6 font-semibold text-3xl" children={} placeholder={} onPointerEnterCapture={} onPointerLeaveCapture={}>
+      <Typography variant="h1" color="orange" className="mb-6 font-semibold text-3xl">
   NUESTROS CLIENTES
 </Typography>
         <Slider {...settings} className="w-full">
